@@ -43,6 +43,7 @@ require TREBI_WC_MYACCOUNT.'includes/billing-address.php';
 require TREBI_WC_MYACCOUNT.'includes/shipping-address.php';
 require TREBI_WC_MYACCOUNT.'includes/checkout-functions.php';
 require TREBI_WC_MYACCOUNT.'includes/registration-functions.php';
+require TREBI_WC_MYACCOUNT.'includes/cart-functions.php';
 
 
 // ***************************************************************

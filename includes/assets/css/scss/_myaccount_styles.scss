@@ -168,6 +168,7 @@ article#post-7{
 		display: inline-block;
 		float: left;
 		border-right: 1px solid #EDEEF2;
+		border-radius: 5px;
 		@media(max-width: 768px){
 			width: 100%;
 			border-right: none;
@@ -177,6 +178,7 @@ article#post-7{
 		background: #F6F6F6;
 		width: 49%;
 		display: inline-block;
+		border-radius: 5px;
 		@media(max-width: 768px){
 			width: 100%;
 		}

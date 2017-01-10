@@ -199,3 +199,14 @@ function trebi_account_addresses(){
 
 	<?php
 }
+// ***************************************************************
+// ADD "VISSZA A VÁSÁRLÁSHOZ" BUTTON
+// ***************************************************************
+add_action( 'woocommerce_account_dashboard', 'woo_add_continue_shopping_button_to_myaccount' );
+function woo_add_continue_shopping_button_to_myaccount() {
+ $shop_page_url = get_option('home');
+/*<a href="<?php echo get_option('home'); ?>/"*/
+ echo '<div class="woocommerce-message">';
+ echo ' <a href="'.$shop_page_url.'" class="button">Vissza a menühöz →</a> Vásárolnál?';
+ echo '</div>';
+}

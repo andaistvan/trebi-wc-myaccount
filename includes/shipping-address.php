@@ -43,18 +43,18 @@ function add_extra_fields($checkout_fields){
 	';
 }
 add_action( 'woocommerce_checkout_order_processed', 'save_extra_fields', 20, 2 );
-function save_extra_fields($order_id, $posted) {
-if (isset($posted['user_gender'])) {
-$order = wc_get_order($order_id);
-update_user_meta($order->get_user_id(), 'user_gender', $posted['user_gender']);
-}
+	function save_extra_fields($order_id, $posted) {
+	if (isset($posted['user_gender'])) {
+	$order = wc_get_order($order_id);
+	update_user_meta($order->get_user_id(), 'user_gender', $posted['user_gender']);
+	}
 }
 
 add_filter( 'default_checkout_user_gender', 'checkout_user_gender',10,2 );
-function checkout_user_gender($value,$input) {
-if ( is_user_logged_in()){
-$current_user = wp_get_current_user();
-$value = get_user_meta( $current_user->ID, $input, true );
-}
+	function checkout_user_gender($value,$input) {
+	if ( is_user_logged_in()){
+	$current_user = wp_get_current_user();
+	$value = get_user_meta( $current_user->ID, $input, true );
+	}
 return $value;
 }
