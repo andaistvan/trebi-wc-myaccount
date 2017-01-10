@@ -15,7 +15,7 @@
 		"oAP": "\/file-store\/content.php",
 		"oF": 0
 		},
-	"\/includes\/assets\/css\/scss\/myaccount_styles.scss": {
+	"\/includes\/assets\/css\/scss\/_myaccount_registration.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -23,7 +23,20 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/includes\/assets\/css\/scss\/myaccount_styles.css",
+		"oAP": "\/includes\/assets\/css\/scss\/_myaccount_registration.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/includes\/assets\/css\/scss\/_myaccount_styles.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/includes\/assets\/css\/scss\/_myaccount_styles.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1

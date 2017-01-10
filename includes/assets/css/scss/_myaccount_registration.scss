@@ -1,0 +1,23 @@
+// ***********************
+// REGISTRATION
+// ***********************
+
+//login / registration FORM BUTTONS
+input#rememberme{
+	display: inline-block;
+}
+
+#customer_login > div.u-column1.col-1 > form > p:nth-child(3) > input.woocommerce-Button.button,
+#customer_login > div.u-column2.col-2 > form > p.woocomerce-FormRow.form-row > input.woocommerce-Button.button{
+	background: orange;
+	&:hover{
+		color: white;
+	}
+}
+
+//registration FROM
+.regform-billing-wrapper{
+	background: #F6F6F6;
+	border-bottom: 1px solid #EDEEF2;
+	padding: 10px;
+}

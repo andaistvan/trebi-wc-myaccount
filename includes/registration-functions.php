@@ -1,4 +1,19 @@
 <?php
+/**
+ *REDUCE THE STRENGTH REQUIREMENT ON THE WOOCOMMERCE PASSWORD.
+ *
+ * Strength Settings
+ * 3 = Strong (default)
+ * 2 = Medium
+ * 1 = Weak
+ * 0 = Very Weak / Anything
+ */
+function reduce_woocommerce_min_strength_requirement( $strength ) {
+    return 0;
+}
+add_filter( 'woocommerce_min_password_strength', 'reduce_woocommerce_min_strength_requirement' );
+
+
 // ***************************************************************
 // REGISTRATION - ADD BILLING FIELDS
 // ***************************************************************
@@ -7,37 +22,39 @@
  */
 function wooc_extra_register_fields() {
     ?>
+	<div class="regform-billing-wrapper">
 
-    <p class="form-row form-row-first">
-    <label for="reg_billing_first_name"><?php _e( 'Vezeték név', 'woocommerce' ); ?> <span class="required">*</span></label>
-    <input type="text" class="input-text" name="billing_first_name" id="reg_billing_first_name" value="<?php if ( ! empty( $_POST['billing_first_name'] ) ) esc_attr_e( $_POST['billing_first_name'] ); ?>" />
-    </p>
+	    <p class="form-row form-row-first">
+	    <label for="reg_billing_first_name"><?php _e( 'Vezeték név', 'woocommerce' ); ?> <span class="required">*</span></label>
+	    <input type="text" class="input-text" name="billing_first_name" id="reg_billing_first_name" value="<?php if ( ! empty( $_POST['billing_first_name'] ) ) esc_attr_e( $_POST['billing_first_name'] ); ?>" />
+	    </p>
 
-    <p class="form-row form-row-last">
-    <label for="reg_billing_last_name"><?php _e( 'Kereszt név', 'woocommerce' ); ?> <span class="required">*</span></label>
-    <input type="text" class="input-text" name="billing_last_name" id="reg_billing_last_name" value="<?php if ( ! empty( $_POST['billing_last_name'] ) ) esc_attr_e( $_POST['billing_last_name'] ); ?>" />
-    </p>
+	    <p class="form-row form-row-last">
+	    <label for="reg_billing_last_name"><?php _e( 'Kereszt név', 'woocommerce' ); ?> <span class="required">*</span></label>
+	    <input type="text" class="input-text" name="billing_last_name" id="reg_billing_last_name" value="<?php if ( ! empty( $_POST['billing_last_name'] ) ) esc_attr_e( $_POST['billing_last_name'] ); ?>" />
+	    </p>
 
-    <div class="clear"></div>
+	    <div class="clear"></div>
 
-    <p class="form-row form-row-wide">
-    <label for="reg_billing_phone"><?php _e( 'Telefon', 'woocommerce' ); ?> <span class="required">*</span></label>
-    <input type="text" class="input-text" name="billing_phone" id="reg_billing_phone" value="<?php if ( ! empty( $_POST['billing_phone'] ) ) esc_attr_e( $_POST['billing_phone'] ); ?>" />
-    </p>
+	    <p class="form-row form-row-wide">
+	    <label for="reg_billing_phone"><?php _e( 'Telefon', 'woocommerce' ); ?> <span class="required">*</span></label>
+	    <input type="text" class="input-text" name="billing_phone" id="reg_billing_phone" value="<?php if ( ! empty( $_POST['billing_phone'] ) ) esc_attr_e( $_POST['billing_phone'] ); ?>" />
+	    </p>
 
-	 <p class="form-row form-row-wide">
-	 <label for="reg_billing_company"><?php _e( 'Cég', 'woocommerce' ); ?> </label>
-	 <input type="text" class="input-text" name="billing_company" id="reg_billing_company" value="<?php if ( ! empty( $_POST['billing_company'] ) ) esc_attr_e( $_POST['billing_company'] ); ?>" />
-	 </p>
+		 <p class="form-row form-row-wide">
+		 <label for="reg_billing_company"><?php _e( 'Cég neve', 'woocommerce' ); ?> </label>
+		 <input type="text" class="input-text" name="billing_company" id="reg_billing_company" value="<?php if ( ! empty( $_POST['billing_company'] ) ) esc_attr_e( $_POST['billing_company'] ); ?>" />
+		 </p>
 
-	 <p class="form-row form-row-wide">
-	 <label for="reg_billing_address_1"><?php _e( 'Számlázási cím', 'woocommerce' ); ?> </label>
-	 <input type="text" class="input-text" name="billing_address_1" id="reg_billing_address_1" value="<?php if ( ! empty( $_POST['billing_address_1'] ) ) esc_attr_e( $_POST['billing_address_1'] ); ?>" />
-	 </p>
+		 <p class="form-row form-row-wide">
+		 <label for="reg_billing_address_1"><?php _e( 'Számlázási cím', 'woocommerce' ); ?> </label>
+		 <input type="text" class="input-text" name="billing_address_1" id="reg_billing_address_1" value="<?php if ( ! empty( $_POST['billing_address_1'] ) ) esc_attr_e( $_POST['billing_address_1'] ); ?>" />
+		 </p>
+	</div><!-- regform-billing-wrapper -->
 
     <?php
 }
-add_action( 'woocommerce_register_form_start', 'wooc_extra_register_fields' );
+add_action( 'woocommerce_register_form', 'wooc_extra_register_fields' );
 
 
 /**

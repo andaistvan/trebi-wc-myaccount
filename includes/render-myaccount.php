@@ -14,46 +14,54 @@ remove_action(
 add_action ('account_header','trebi_account_header');
 function trebi_account_header(){
 	?>
-		<div id="account-header">
 
-			<div class="wp_account_cont">
+		<?php
+		if(is_user_logged_in()) {
+			?>
+			<div id="account-header">
+				<div class="wp_account_cont">
 
-				<div class="icon-img-cont">
-					<?php echo '<img src="' . plugins_url( 'assets/img/user-icon.png', __FILE__ ) . '" > '; ?>
-				</div><!-- icon-img-cont -->
+					<div class="icon-img-cont">
+						<?php echo '<img src="' . plugins_url( 'assets/img/user-icon.png', __FILE__ ) . '" > '; ?>
+					</div><!-- icon-img-cont -->
+						<?php
+							global $woocommerce;
+							 $current_user = wp_get_current_user();
+
+							 /**
+							  * @example Safe usage: $current_user = wp_get_current_user();
+							  * if ( !($current_user instanceof WP_User) )
+							  *     return;
+							  */
+							 echo '<p class="user-name">'.$current_user->user_firstname.' '.$current_user->user_lastname.'</p>';
+							//  echo 'Username: ' . $current_user->user_login . '<br />';
+							//  echo 'User email: ' . $current_user->user_email . '<br />';
+							//  echo 'User first name: ' . $current_user->user_firstname . '<br />';
+							//  echo 'User last name: ' . $current_user->user_lastname . '<br />';
+							//  echo 'User display name: ' . $current_user->display_name . '<br />';
+							//  echo 'User ID: ' . $current_user->ID . '<br />';
+						?>
 					<?php
-						global $woocommerce;
-					    $current_user = wp_get_current_user();
-
-					    /**
-					     * @example Safe usage: $current_user = wp_get_current_user();
-					     * if ( !($current_user instanceof WP_User) )
-					     *     return;
-					     */
-					    echo '<p class="user-name">'.$current_user->user_firstname.' '.$current_user->user_lastname.'</p>';
-					   //  echo 'Username: ' . $current_user->user_login . '<br />';
-					   //  echo 'User email: ' . $current_user->user_email . '<br />';
-					   //  echo 'User first name: ' . $current_user->user_firstname . '<br />';
-					   //  echo 'User last name: ' . $current_user->user_lastname . '<br />';
-					   //  echo 'User display name: ' . $current_user->display_name . '<br />';
-					   //  echo 'User ID: ' . $current_user->ID . '<br />';
+					$edit_account_url = wc_get_endpoint_url( 'edit-account', '', wc_get_page_permalink( 'myaccount' ) );
 					?>
-				<?php
-				$edit_account_url = wc_get_endpoint_url( 'edit-account', '', wc_get_page_permalink( 'myaccount' ) );
-				?>
-				<p><a class="edit-account" href="<?php echo $edit_account_url; ?>">jelszó módosítás</a></p>
-				<?php
-				$customer_logout_url = wc_get_endpoint_url( 'customer-logout', '', wc_get_page_permalink( 'myaccount' ) );
-				?>
-				<p><a class="customer-logout" href="<?php echo $customer_logout_url; ?>">kijelentkezés</a></p>
-			</div><!-- wp_account_cont -->
+					<p><a class="edit-account" href="<?php echo $edit_account_url; ?>">jelszó módosítás</a></p>
+					<?php
+					$customer_logout_url = wc_get_endpoint_url( 'customer-logout', '', wc_get_page_permalink( 'myaccount' ) );
+					?>
+					<p><a class="customer-logout" href="<?php echo $customer_logout_url; ?>">kijelentkezés</a></p>
+				</div><!-- wp_account_cont -->
 
-			<div class="myaccoun_headline-cont">
-				<h2>Fiók adatok</h2>
-				<p>Mindössze néhány kattintással módosíthatod a felhasználói adataidat, illetve szállítási és számlázási címedet, “Nem szeretem” listádat.</p>
-			</div><!-- myaccoun_headline-cont -->
+				<div class="myaccoun_headline-cont">
+					<h2>Fiók adatok</h2>
+					<p>Mindössze néhány kattintással módosíthatod a felhasználói adataidat, illetve szállítási és számlázási címedet, “Nem szeretem” listádat.</p>
+				</div><!-- myaccoun_headline-cont -->
 
-		</div><!-- account-header -->
+			</div><!-- account-header -->
+			<?php
+		} else {
+			
+		} ?>
+
 	<?php
 }
 

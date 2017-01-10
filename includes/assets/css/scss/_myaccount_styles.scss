@@ -25,8 +25,8 @@ article#post-7{
 		}
 		.entry-content{
 			padding: 24px;
-			@media(max-width: 380px){
-				padding: 24px 0px;
+			@media(max-width: 460px){
+				padding: 0 0 24px 0px;
 			}
 		}
 		footer.entry-footer{
@@ -114,7 +114,9 @@ article#post-7{
 			text-align: center;
 			color: black;
 			@media(max-width: 460px){
-				margin-top: 20px;
+				clear: both;
+				margin-top: 50px;
+				display: block;
 			}
 		}
 		p{
