@@ -34,15 +34,15 @@ add_action('wp_enqueue_scripts', 'tmr_enqueued_assets');
 
 
 // define plugin ROOT DIR
-define('PLUGIN_DIR', dirname(__FILE__).'/');
+define('TREBI_WC_MYACCOUNT', dirname(__FILE__).'/');
 //include functions files (php)
-require PLUGIN_DIR.'includes/main-myaccount-functions.php';
-require PLUGIN_DIR.'includes/custom-tab-functions.php';
-require PLUGIN_DIR.'includes/render-myaccount.php';
-require PLUGIN_DIR.'includes/billing-address.php';
-require PLUGIN_DIR.'includes/shipping-address.php';
-require PLUGIN_DIR.'includes/checkout-functions.php';
-require PLUGIN_DIR.'includes/registration-functions.php';
+require TREBI_WC_MYACCOUNT.'includes/main-myaccount-functions.php';
+require TREBI_WC_MYACCOUNT.'includes/custom-tab-functions.php';
+require TREBI_WC_MYACCOUNT.'includes/render-myaccount.php';
+require TREBI_WC_MYACCOUNT.'includes/billing-address.php';
+require TREBI_WC_MYACCOUNT.'includes/shipping-address.php';
+require TREBI_WC_MYACCOUNT.'includes/checkout-functions.php';
+require TREBI_WC_MYACCOUNT.'includes/registration-functions.php';
 
 
 // ***************************************************************

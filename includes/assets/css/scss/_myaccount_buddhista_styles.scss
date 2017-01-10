@@ -1,3 +1,7 @@
+// ***********************
+// BUDDHISTA STYLE
+// ***********************
+
 div.content-wrapper{
 	background: #F0F0F0;
 	border-radius: 3px;
@@ -164,7 +168,7 @@ article#post-7{
 	}
 	.left-col{
 		background: #F6F6F6;
-		width: 49%;
+		width: 50%;
 		display: inline-block;
 		float: left;
 		border-right: 1px solid #EDEEF2;
@@ -175,7 +179,7 @@ article#post-7{
 	}
 	.right-col{
 		background: #F6F6F6;
-		width: 49%;
+		width: 50%;
 		display: inline-block;
 		@media(max-width: 768px){
 			width: 100%;
@@ -184,10 +188,16 @@ article#post-7{
 }
 
 //HEAD STYLES
-.my-account-data-wrapper .my-account-head{
+.my-account-data-wrapper .my-account-head-buddhista{
 	background: #F6F6F6;
-	border-bottom: 1px solid #EDEEF2;
-	border-top: 1px solid #EDEEF2;
+	padding-top: 50px;
+	border-bottom: 1px solid #F6F6F6;
+	border-top: 1px solid #F6F6F6;
+	height: 192px;
+	@media(max-width: 768px){
+		height: auto;
+		padding-top: 0;
+	}
 }
 .my-account-data-wrapper h3{
 	font-family: 'Helvetica';

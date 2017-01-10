@@ -59,7 +59,7 @@ function trebi_account_header(){
 			</div><!-- account-header -->
 			<?php
 		} else {
-			
+
 		} ?>
 
 	<?php
@@ -151,6 +151,51 @@ function trebi_account_addresses(){
 
 	</div><!-- my-account-data-wrapper -->
 <!-- RESPONSIVE STRUCTURE -->
+
+
+<!-- ********************************** -->
+<!-- BUDDHISTA STYLE -->
+<!-- ********************************** -->
+	</br>
+	<div class="my-account-data-wrapper">
+		<div class="left-col">
+
+			<div class="my-account-head-buddhista"><!-- left-col head -->
+				<h3>Számlázási adatok</h3>
+				<p><a class="edit-address" href="<?php echo $edit_address_url; ?>/szamlazas">szerkesztés</a></p>
+			</div><!-- left-col head -->
+
+		</div><!-- left-col -->
+
+		<div class="right-col">
+			<div class="my-account-body">
+				<div class="my-account-body">
+					<ul class="my-account-list">
+						<?php
+							echo '<li><img src="' . plugins_url( 'assets/img/user_sm_icon.png', __FILE__ ) . '" >
+							<p class="user-data">'.$current_user->user_firstname.' '.$current_user->user_lastname.'</p></li>';
+
+							$customer_id = get_current_user_id();
+							$wc_billing_phone = get_user_meta( $customer_id, 'billing_phone', true );
+							echo '<li><img src="' . plugins_url( 'assets/img/phone_sm_icon.png', __FILE__ ) . '" >
+							<p class="user-data">'.$wc_billing_phone.'</p>';
+
+							$wc_billing_company = get_user_meta( $customer_id, 'billing_company', true );
+							echo '<li><img src="' . plugins_url( 'assets/img/shipping_sm_icon.png', __FILE__ ) . '" >
+							<p class="user-data">'.$wc_billing_company.'</p></li>';
+
+							$wc_billing_address = get_user_meta( $customer_id, 'billing_address_1', true );
+							echo '<li><img src="' . plugins_url( 'assets/img/address_sm_icon.png', __FILE__ ) . '" >
+							<p class="user-data">'.$wc_billing_address.'</p></li>';
+						?>
+					</ul>
+
+				</div><!-- my-account-body -->
+
+			</div><!-- my-account-body -->
+		</div><!-- right-col -->
+
+	</div><!-- my-account-data-wrapper -->
 
 	<?php
 }
