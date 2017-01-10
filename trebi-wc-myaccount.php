@@ -26,7 +26,7 @@ if (!defined('ABSPATH')) {
 //enque plugin scripts and stylesheets
 function tmr_enqueued_assets()
 {
-    wp_enqueue_style('tmr-style', plugin_dir_url(__FILE__).'/assets/css/trebi_myaccount.min.css');
+    wp_enqueue_style('tmr-style', plugin_dir_url(__FILE__).'/includes/assets/css/trebi_myaccount-min.css');
     /*wp_enqueue_script('tmr-script', plugin_dir_url(__FILE__).'/assets/js/tmr-main.min.js', array('jquery'), '1.0', true);*/
 }
 add_action('wp_enqueue_scripts', 'tmr_enqueued_assets');
@@ -42,6 +42,8 @@ require PLUGIN_DIR.'includes/render-myaccount.php';
 require PLUGIN_DIR.'includes/billing-address.php';
 require PLUGIN_DIR.'includes/shipping-address.php';
 require PLUGIN_DIR.'includes/checkout-functions.php';
+require PLUGIN_DIR.'includes/registration-functions.php';
+
 
 // ***************************************************************
 // locate template to override factory settings

@@ -1,0 +1,241 @@
+div.content-wrapper{
+	background: #F0F0F0;
+	border-radius: 3px;
+	.entry-header{
+
+	}
+}
+
+// ***********************
+// global
+// ***********************
+article#post-7{
+	.content-wrapper{
+		header.entry-header{
+			border-bottom: none;
+			padding-bottom: 0px;
+			@media(max-width: 460px){
+				width: 100%;
+				display: block;
+			}
+
+			h2.entry-title{
+
+			}
+		}
+		.entry-content{
+			padding: 24px;
+			@media(max-width: 380px){
+				padding: 24px 0px;
+			}
+		}
+		footer.entry-footer{
+			border-top: none;
+		}
+	}
+}
+
+// ***********************
+// entry header
+// ***********************
+#account-header{
+	.wp_account_cont {
+		width: 210px;
+		float: left;
+		@media(max-width: 460px){
+			float: none;
+			display: block;
+			width: 100%;
+		}
+		.icon-img-cont{
+			display: table;
+			margin: 0 auto 10px auto;
+		}
+		p.user-name{
+			text-align: center;
+			font-family: 'Helvetica';
+			font-size: 14px;
+			text-align: center;
+			color: black;
+			margin-bottom: 5px;
+			line-height: 1.25em;
+			@media(max-width: 460px){
+				margin-bottom: 15px;
+			}
+		}
+		p{
+			text-align: center !important;
+			line-height: 1.25em;
+			margin-bottom: 6px;
+			a.edit-account{
+				font-family: 'Helvetica';
+				font-size: 12px;
+				text-align: center;
+				color: orange;
+				float: none;
+				&:hover{
+					color: black;
+				}
+				@media(max-width: 460px){
+					display: inline-block;
+					float: left;
+					padding-top: 5px;
+				}
+			}
+			a.customer-logout{
+				background: #9B9B9B;
+				color: white;
+				font-size: 11px;
+				border-radius: 100px;
+				padding: 4px 10px;
+				float: none;
+				&:hover{
+					color: black;
+				}
+				@media(max-width: 460px){
+					display: inline-block;
+					float: right;
+				}
+			}
+		}
+	}
+	.myaccoun_headline-cont {
+		float: right;
+		display: inline-block;
+		width: calc(100% - 210px);
+		@media(max-width: 460px){
+			float: none;
+			display: block;
+			width: 100%;
+		}
+		h2{
+			font-family: 'Helvetica';
+			font-size: 30px;
+			text-align: center;
+			color: black;
+			@media(max-width: 460px){
+				margin-top: 20px;
+			}
+		}
+		p{
+			font-family: 'Helvetica';
+			font-size: 12px;
+			text-align: center;
+			color: black;
+			@media(max-width: 460px){
+				display: none;
+			}
+		}
+	}
+}
+
+// ***********************
+// entry content MyAccount
+// ***********************
+.entry-content{
+	.woocommerce{
+		.woocommerce-MyAccount-content{
+			width: 100%;
+			float: none;
+			background: none;
+			border-radius: 3px;
+			min-height: 100px;
+		}
+	}
+}
+
+// ***********************
+// MYACCOUNT DATA -
+// REPSONSIVE STRUCTURE
+// ***********************
+.my-account-data-wrapper{
+	width: 100%;
+	background: #F9F9F9;
+	border-radius: 3px;
+	@media(max-width: 768px){
+		width: 70%;
+		display: table;
+		margin: 0 auto;
+	}
+	@media(max-width: 540px){
+		width: 100%;
+	}
+	.left-col{
+		background: #F6F6F6;
+		// padding: 7px;
+		width: 50%;
+		display: inline-block;
+		float: left;
+		border-right: 1px solid #EDEEF2;
+		@media(max-width: 768px){
+			width: 100%;
+			border-right: none;
+		}
+	}
+	.right-col{
+		background: #F6F6F6;
+		// padding: 7px;
+		width: 50%;
+		display: inline-block;
+		@media(max-width: 768px){
+			width: 100%;
+		}
+	}
+}
+
+//HEAD STYLES
+.my-account-data-wrapper .my-account-head{
+	background: #F6F6F6;
+	border-bottom: 1px solid #EDEEF2;
+	border-top: 1px solid #EDEEF2;
+}
+.my-account-data-wrapper h3{
+	font-family: 'Helvetica';
+	font-weight: bold;
+	text-align: center;
+	font-size: 16px;
+	color: #000000;
+	letter-spacing: 1px;
+	line-height: 20px;
+	text-transform: uppercase;
+	margin-top: 16px;
+}
+.my-account-data-wrapper p{
+	text-align: center !important;
+	line-height: 1.25em;
+	margin-bottom: 6px !important;
+	a.edit-address{
+		font-family: 'Helvetica';
+		font-size: 12px;
+		text-align: center;
+		color: orange;
+		&:hover{
+			color: black;
+		}
+	}
+}
+
+//MY ACCOUNT BODY STYLE
+.my-account-body{
+	background: #F9F9F9;
+	padding: 20px 45px;
+	ul.my-account-list{
+		list-style: none;
+		margin: 0px;
+		li{
+			img{
+				display: inline-block;
+				margin-right: 10px;
+				margin-bottom: 3px;
+			}
+			p.user-data{
+				font-family: 'Helvetica';
+				font-size: 13px;
+				line-height: 1.25em;
+				text-align: left;
+				display: inline-block;
+				margin-bottom: 10px;
+			}
+		}
+	}
+}

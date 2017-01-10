@@ -33,8 +33,13 @@ do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 		<h3><?php echo apply_filters( 'woocommerce_my_account_edit_address_title', $page_title ); ?></h3>
 
 		<?php do_action( "woocommerce_before_edit_address_form_{$load_address}" ); ?>
+	<?php
+	// ***************************************************************
+	// dropdown miatt belenyúlni
+	// ***************************************************************
 
-		<?php foreach ( $address as $key => $field ) : ?>
+	 ?>
+		<!-- <?php foreach ( $address as $key => $field ) : ?> -->
 
 			<?php woocommerce_form_field( $key, $field, ! empty( $_POST[ $key ] ) ? wc_clean( $_POST[ $key ] ) : $field['value'] ); ?>
 

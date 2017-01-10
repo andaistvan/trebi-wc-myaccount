@@ -173,6 +173,12 @@
 		"oAP": "\/includes\/main-myaccount-functions.php",
 		"oF": 0
 		},
+	"\/includes\/registration-functions.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/registration-functions.php",
+		"oF": 0
+		},
 	"\/includes\/render-myaccount.php": {
 		"ft": 8192,
 		"oA": 2,
